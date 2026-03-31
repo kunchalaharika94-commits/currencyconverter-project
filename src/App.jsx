@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter,Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import DashboardNavbar from "./Components/Dashboardnavbar";
 import Home from "./Components/Home";
@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       {user ? <DashboardNavbar /> : <Navbar />}
-
+      <HashRouter>
       <Routes>
         {/* Root: redirect based on login status */}
         <Route path="/" element={
@@ -34,6 +34,7 @@ function App() {
           <PrivateRoute><Currencies /></PrivateRoute>
         } />
       </Routes>
+        </HashRouter>
     </>
   );
 }
