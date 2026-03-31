@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Stylings/Login.css";
 
-function Login({ onBack }) {
+function Login({ onBack,setShowNavbarLogin}) {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
 
